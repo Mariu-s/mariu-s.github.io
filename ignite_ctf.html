@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+ <title>Ignite CTF</title>
+ <style>
+
+.class1{
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    height: 750px;
+    left: 49%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+  }
+  a {
+    color: red;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: red;
+    text-decoration: underline;
+  }
+ </style>
+<body style="background-color:black;">
+<div class="class1">
+  <pre style="color: white;">
+          ██╗ ██████╗ ███╗   ██╗██╗████████╗███████╗     ██████╗████████╗███████╗
+          ██║██╔════╝ ████╗  ██║██║╚══██╔══╝██╔════╝    ██╔════╝╚══██╔══╝██╔════╝
+          ██║██║  ███╗██╔██╗ ██║██║   ██║   █████╗      ██║        ██║   █████╗
+          ██║██║   ██║██║╚██╗██║██║   ██║   ██╔══╝      ██║        ██║   ██╔══╝
+          ██║╚██████╔╝██║ ╚████║██║   ██║   ███████╗    ╚██████╗   ██║   ██║
+          ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝   ╚══════╝     ╚═════╝   ╚═╝   ╚═╝
+
+    Hello and welcome to my first blog. Today we're tackling the TryHackMe Ignite CTF.It's a easy-rated ctf and
+    has been created 777 days ago.
+
+
+    Starting off with a nmap scan we can see that port 80 is open and port 1099 is filtered.Looking into the robots.txt
+    file we can see that a directory by the name of "/fuel/" exists.
+
+    <img src="img/nmap_scan.png" alt="nmap_scan">
+
+
+    Heading into that directory we can see a login portal. Trying default credentials gives us a successful login!
+
+    <b>VALID CREDENTIALS: admin:admin</b>
+
+    <img src="img/login_portal.png" alt="login_portal">
+
+    Poking around the admin dashboard we can see the upload tab, heading in there and trying to upload a php
+    shell does not work. Trying to bypass this using extensions such as .php5, .phtml , etc. doesn't work either!
+    If nothing works we can always try and find an exploit for the Fuel CMS version.
+
+    <a href="index.html">Back to menu</a>
+  </pre>
+</div>
+</body>
+</html>
